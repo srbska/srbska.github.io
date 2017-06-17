@@ -1,0 +1,31 @@
+{
+  "name": "holoscene.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.18.12",
+    "del": "^2.2.2",
+    "extensions": "edsilv/extensions",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-header": "^1.8.8",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1",
+    "jquery-plugins": "edsilv/jquery-plugins",
+    "magnific-popup": "^1.1.0",
+    "run-sequence": "^1.2.2",
+    "scrollreveal": "^3.3.5",
+    "utils": "edsilv/utils"
+  },
+  "license": "MIT",
+  "author": "Edward Silverton <ed@holoscene.io> (http://holoscene.io)",
+  "bugs": {
+    "url": "https://github.com/holoscene/holoscene.github.io/issues"
+  },
+  "homepage": "https://github.com/holoscene/holoscene.github.io#readme"
+}
