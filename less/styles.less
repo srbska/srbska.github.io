@@ -1,7 +1,6 @@
 @import "variables.less";
 @import "mixins.less";
 @import "home.less";
-@import "viewer.less";
 
 html,
 body {
@@ -10,12 +9,12 @@ body {
 }
 
 body {
-    .serif-font;
+    //.serif-font;
     webkit-tap-highlight-color: @gray-darker;
 }
 
 hr {
-    border-color: @theme-primary;
+    border-color: @gray-light;
     border-width: 3px;
     max-width: 50px;
 }
@@ -43,8 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-    //.sans-serif-font;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    .sans-serif-font;
 }
 
 p {
@@ -83,37 +81,31 @@ aside {
     }
 }
 
-#intro {
-    background-color: #292929;
-    color: #fff;
+#about {
+
+    background-color: @gray-base;
+    color: @gray-light;
 
     .submit {
-        background-color: transparent;
-        border: 3px solid #ffffff;
-        -webkit-transition: color 0.4s, background-color 0.4s, -webkit-transform 0.4s;
-        transition: color 0.4s, background-color 0.4s, transform 0.4s;
+        .border-btn;
     }
-
-    .submit:hover {
-        color: #000000;
-        background-color: #ffffff;
-        cursor: pointer;
-    }
+    
 }
 
 #subscribe {
     text-align: center;
-
-    .btn {
-        margin: 20px 0 80px 0;
-    }
 }
 
 #contact {
+    padding-bottom: 0px;
     p {
         margin: 0;
         padding: 0;
     }
+}
+
+#video {
+    background-color: @gray-base;
 }
 
 // Navigation
