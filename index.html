@@ -141,21 +141,11 @@
         </div>
     </section>
 
-    <!--<section class="bg-primary" id="video">
-        <div class="container">
-            <div class="row">
-                <div class="youtube-wrapper col-lg-8 col-lg-offset-2 text-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/K-NLHm-nN9s" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
     <section class="bg-primary" id="video">
         <div class="container">
             <div class="row">
                 <div class="youtube-wrapper col-lg-8 col-lg-offset-2 text-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eVk0LDqyFTw" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/K-NLHm-nN9s" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -256,7 +246,6 @@
                 $allVideos.each(function() {											
                     var $el = $(this);
                     var newWidth = $el.parent($fluidEl).width();
-                    console.log(newWidth);
                     $el
                         .width(newWidth)
                         .height(newWidth * $el.data('aspectRatio'));
