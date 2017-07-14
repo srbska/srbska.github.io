@@ -40,7 +40,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only toggle-navigation"></span> <span class="menu"></span> <i class="fa fa-bars"></i>
                 </button>
             </div>
 
@@ -48,19 +48,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll aboutMenuItem" href="#about"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contents">Contents</a>
+                        <a class="page-scroll contentsMenuItem" href="#contents"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#video">Video</a>
+                        <a class="page-scroll videoMenuItem" href="#video"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll contactMenuItem" href="#contact"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#support">Support</a>
+                        <a class="page-scroll supportMenuItem" href="#support"></a>
                     </li>
                 </ul>
             </div>
@@ -73,7 +73,7 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h1>SRBSKA.ORG</h1>
-                <h2>How can one remember a place which exists in many memories, in many stories?</h2>
+                <h2></h2>
             </div>
         </div>
     </header>
@@ -81,16 +81,8 @@
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <p>
-                        The village of  Srbská is a tiny place in northern Czech Republic, border to Poland. Today it has just a handful of houses but prior to 1946 it was a thriving village with hundreds of residents, a village which used to be named Wünschendorf, which translates from German as ‘wish village’. 
-                    </p>
-                    <p>
-                        When I moved there into the village in 2007 I had yet to uncover the rich tapestry of stories holding the past of this now seemingly empty location. This archive is an attempt to ensure this past can be preserved and experienced by a wider audience.
-                    </p>
-                    <p> 
-                        Srbska.org is currently in development. To receive a notification when this site goes live, please subscribe to the mailing list:
-                    </p>
+                <div class="col-lg-8 col-lg-offset-2 aboutText">
+                    
                 </div>
             </div>
             <div class="row">
@@ -107,14 +99,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2 class="section-heading text-center">Contents</h2>
+                    <h2 class="section-heading text-center contentsTitle"></h2>
                     <hr class="primary">
-                    <p>
-                        Over the past decade I’ve travelled to northern Germany and the Czech Republic to film interviews with people who were exiled from the village of Wünschendorf in 1946 and also the residents who have lived in the village up until the present day.
-                    </p>
-                    <p>
-                        Through this process I’ve also accumulated hundreds of photographs and archival documents, all of which will be displayed in srbska.org. 
-                    </p>
+                    <span class="contentsText">
+                    
+                    </span>
                 </div>
             </div>
         </div>
@@ -173,31 +162,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Support</h2>
+                    <h2 class="section-heading supportTitle"></h2>
                     <hr class="primary">
-                    <p>
-                        Srbska.org is a project by Sophie Dixon - made possible only  through the generous support and enthusiasm of:<br/><br/>
- 
-                        Ela Kremer<br/>
-                        David Lion<br/>
-                        Ines Muller<br/>
-                        Annika Oste<br/>
-                        Beatrix Osterkamp<br/>
-                        Ellie Pridgeon<br/>
-                        Julian Saenger<br/>
-                        David Sanetrník<br/>
-                        Edward Silverton<br/>
-                        Marcela Šomjáková<br/>
-                        Johanna Spaeth<br/>
-                        Milan Votava<br/>
-                        Kate Žejdlová<br/>
-                    </p>
-                    <p>                        
-                        A special thanks to<br/><br/>                        
-                        <a href="http://frydlantsko.com">frydlantsko.com</a> for sharing their wonderful postcard collection<br/>
-                        The Netherlands Film Academy for supporting this project within the context of my Master’s degree.<br/><br/>                        
-                        Srbska.org is built with <a href="https://omeka.org/">Omeka</a> and <a href="http://universalviewer.io">Universal Viewer</a>.
-                    </p>
+                    <span class="supportText"></span>
                 </div>
             </div>
         </div>
@@ -214,8 +181,12 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+    <!-- Internationalisation -->
+    <script src="https://unpkg.com/i18next/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@2.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+
     <!-- Theme JavaScript -->
-    <script type="text/javascript" src="/vendor/utils/utils.js"></script>
+    <script src="/vendor/utils/utils.js"></script>
     <!--<script src="js/index.min.js"></script>-->
 
     <!--<script>
@@ -227,6 +198,132 @@
         ga('create', 'UA-100334807-1', 'auto');
         ga('send', 'pageview');
     </script>-->
+
+    <script>
+
+        var lngDetector = new window.i18nextBrowserLanguageDetector();
+        var options = {
+            // order and from where user language should be detected
+            order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+
+            // keys or params to lookup language from
+            lookupQuerystring: 'lng',
+            lookupCookie: 'i18next',
+            lookupLocalStorage: 'i18nextLng',
+
+            // cache user language on
+            caches: ['localStorage', 'cookie'],
+            excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
+
+            // optional expire and domain for set cookie
+            cookieMinutes: 10,
+            cookieDomain: 'myDomain',
+
+            // optional htmlTag with lang attribute, the default is:
+            htmlTag: document.documentElement
+        };
+
+        i18next
+        .use(lngDetector)
+        .init({
+            fallbackLng: 'en',
+            debug: true,
+            detection: options,
+            resources: {
+                    en: {
+                        translation: {
+                            "toggleNavigation": "Toggle navigation",
+                            "menu": "Menu",
+                            "aboutMenuItem": "About",
+                            "contentsMenuItem": "Contents",
+                            "videoMenuItem": "Video",
+                            "contactMenuItem": "Contact",
+                            "supportMenuItem": "Support",
+                            "subtitle": "How can one remember a place which exists in many memories, in many stories?",
+                            "aboutText": "\
+                                <p>The village of  Srbská is a tiny place in northern Czech Republic, border to Poland. Today it has just a handful of houses but prior to 1946 it was a thriving village with hundreds of residents, a village which used to be named Wünschendorf, which translates from German as ‘wish village’.</p>\
+                                <p>\
+                                    When I moved there into the village in 2007 I had yet to uncover the rich tapestry of stories holding the past of this now seemingly empty location. This archive is an attempt to ensure this past can be preserved and experienced by a wider audience.\
+                                </p>\
+                                <p>\
+                                    Srbska.org is currently in development. To receive a notification when this site goes live, please subscribe to the mailing list:\
+                                </p>",
+                            "contentsTitle": "Contents",
+                            "contentsText": "\
+                                <p>\
+                                    Over the past decade I’ve travelled to northern Germany and the Czech Republic to film interviews with people who were exiled from the village of Wünschendorf in 1946 and also the residents who have lived in the village up until the present day.\
+                                </p>\
+                                <p>\
+                                    Through this process I’ve also accumulated hundreds of photographs and archival documents, all of which will be displayed in srbska.org.\
+                                </p>",
+                            "supportTitle": "Support",
+                            "supportText": "\
+                                <p>\
+                                    Srbska.org is a project by Sophie Dixon - made possible only  through the generous support and enthusiasm of:\
+                                    <br/><br/>\
+                                    Ela Kremer<br/>\
+                                    David Lion<br/>\
+                                    Ines Muller<br/>\
+                                    Annika Oste<br/>\
+                                    Beatrix Osterkamp<br/>\
+                                    Ellie Pridgeon<br/>\
+                                    Julian Saenger<br/>\
+                                    David Sanetrník<br/>\
+                                    Edward Silverton<br/>\
+                                    Marcela Šomjáková<br/>\
+                                    Johanna Spaeth<br/>\
+                                    Milan Votava<br/>\
+                                    Kate Žejdlová<br/>\
+                                </p>\
+                                <p>\
+                                    A special thanks to<br/><br/>\
+                                    <a href=\"http://frydlantsko.com\">frydlantsko.com</a> for sharing their wonderful postcard collection<br/>\
+                                    The Netherlands Film Academy for supporting this project within the context of my Master’s degree.<br/><br/>\
+                                    Srbska.org is built with <a href=\"https://omeka.org/\">Omeka</a> and <a href=\"http://universalviewer.io\">Universal Viewer</a>.\
+                                </p>"
+                        }
+                    },
+                    cz: {
+                        translation: {
+                            "subtitle": "How can one remember a place which exists in many memories, in many stories? (cz)"
+                        }
+                    },
+                    de: {
+                        translation: {
+                            "subtitle": "How can one remember a place which exists in many memories, in many stories? (de)"
+                        }
+                    }
+                }
+            }, 
+            function(err, t) {
+                updateContent();
+            }
+        );
+
+        function updateContent() {
+            $('#mainNav .toggle-navigation').html(i18next.t('toggleNavigation'));
+            $('#mainNav .menu').html(i18next.t('menu'));
+            $('#mainNav .nav .aboutMenuItem').html(i18next.t('aboutMenuItem'));
+            $('#mainNav .nav .contentsMenuItem').html(i18next.t('contentsMenuItem'));
+            $('#mainNav .nav .videoMenuItem').html(i18next.t('videoMenuItem'));
+            $('#mainNav .nav .contactMenuItem').html(i18next.t('contactMenuItem'));
+            $('#mainNav .nav .supportMenuItem').html(i18next.t('supportMenuItem'));
+            $('.header-content-inner h2').html(i18next.t('subtitle'));
+            $('#about .aboutText').html(i18next.t('aboutText'));
+            $('#contents .contentsTitle').html(i18next.t('contentsTitle'));
+            $('#contents .contentsText').html(i18next.t('contentsText'));
+            $('#support .supportTitle').html(i18next.t('supportTitle'));
+            $('#support .supportText').html(i18next.t('supportText'));
+        }
+
+        function changeLng(lng) {
+            i18next.changeLanguage(lng);
+        }
+
+        i18next.on('languageChanged', function() {
+            updateContent();
+        });
+    </script>
 
     <script>
         $(function() {
