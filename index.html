@@ -88,7 +88,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <p>
-                        <form id="subscribe" action="https://tinyletter.com/srbska" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/srbska', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><input type="text" style="width:200px" placeholder="email" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" class="btn submit btn-primary" value="Subscribe" /></form>
+                        <form id="subscribe" action="https://tinyletter.com/srbska" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/srbska', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><input type="text" style="width:200px" placeholder="" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" class="btn submit btn-primary" value="Subscribe" /></form>
                     </p>
                 </div>
             </div>
@@ -280,7 +280,8 @@
                                     <a href=\"http://frydlantsko.com\">frydlantsko.com</a> for sharing their wonderful postcard collection<br/>\
                                     The Netherlands Film Academy for supporting this project within the context of my Master’s degree.<br/><br/>\
                                     Srbska.org is built with <a href=\"https://omeka.org/\">Omeka</a> and <a href=\"http://universalviewer.io\">Universal Viewer</a>.\
-                                </p>"
+                                </p>",
+                            "emailPlaceholder": "email"
                         }
                     },
                     cz: {
@@ -314,6 +315,7 @@
             $('#contents .contentsText').html(i18next.t('contentsText'));
             $('#support .supportTitle').html(i18next.t('supportTitle'));
             $('#support .supportText').html(i18next.t('supportText'));
+            $('#tlemail').prop('placeholder', i18next.t('emailPlaceholder'));
         }
 
         function changeLng(lng) {
