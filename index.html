@@ -204,23 +204,7 @@
         var lngDetector = new window.i18nextBrowserLanguageDetector();
         var options = {
             // order and from where user language should be detected
-            order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
-
-            // keys or params to lookup language from
-            lookupQuerystring: 'lng',
-            lookupCookie: 'i18next',
-            lookupLocalStorage: 'i18nextLng',
-
-            // cache user language on
-            caches: ['localStorage', 'cookie'],
-            excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
-
-            // optional expire and domain for set cookie
-            cookieMinutes: 10,
-            cookieDomain: 'myDomain',
-
-            // optional htmlTag with lang attribute, the default is:
-            htmlTag: document.documentElement
+            order: ['navigator']
         };
 
         i18next
@@ -288,7 +272,7 @@
                             "emailPlaceholder": "email"
                         }
                     },
-                    cz: {
+                    cs: {
                         translation: {
                             "toggleNavigation": "Toggle navigation",
                             "menu": "Menu",
@@ -297,8 +281,12 @@
                             "videoMenuItem": "Video",
                             "contactMenuItem": "Contact",
                             "supportMenuItem": "Support",
+<<<<<<< HEAD
                             "subtitle": "(cz) Jak si člověk může vybavovat místo, které existuje v mnoha vzpomínkách, mnoha příbězích?",
 ",
+=======
+                            "subtitle": "(cs) How can one remember a place which exists in many memories, in many stories?",
+>>>>>>> 6cb79a61454ef92d3581e6164273cd0a74cbb475
                             "aboutText": "\
                                 <p>Srbská je malá vesnička v severní části České republiky, u hranic s Polskem. Dnes je v ní jen hrstka domů, ale před rokem 1946 to byla prosperující vesnice se stovkami obyvatel a jménem Wünschendorf, což lze z němčiny přeložit jako „vesnice přání“. Poté co museli obyvatelé Wünschendorfu v roce 1946 odejít do exilu, vesnice se postupně vytrácela, až z ní zůstalo jen to, co je tam dnes.</p>\
                                 <p>\
