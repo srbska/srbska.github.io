@@ -3,6 +3,12 @@
  * Copyright 2013-2017 Edward Silverton <ed@holoscene.io> (http://holoscene.io)
  * Licensed under  ()
  */
+body.home .bg-primary a {
+  color: #c6ae8e;
+}
+body.home .bg-primary i.fa {
+  color: #c6ae8e;
+}
 body.home header {
   position: relative;
   width: 100%;
@@ -100,7 +106,7 @@ body.home .showcase-box .showcase-box-caption {
   color: white;
   opacity: 0;
   display: block;
-  background: rgba(166, 0, 102, 0.9);
+  background: rgba(157, 84, 32, 0.9);
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -151,6 +157,49 @@ body.home span.explanatory {
   display: block;
   font-size: 12px;
 }
+body.home #about {
+  background-color: #292929;
+  color: #dbdbdb;
+}
+body.home #about .submit {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  -webkit-transition: color 0.4s, background-color 0.4s, -webkit-transform 0.4s;
+  transition: color 0.4s, background-color 0.4s, transform 0.4s;
+}
+body.home #about .submit:hover {
+  color: #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+body.home #subscribe {
+  text-align: center;
+}
+body.home #contents ul {
+  margin: 0;
+}
+body.home #contents ul li {
+  padding: 2px 0 2px 0;
+}
+body.home #contact {
+  padding-bottom: 0px;
+}
+body.home #contact p {
+  margin: 0;
+  padding: 0;
+}
+body.home #online {
+  background-color: #292929;
+}
+body.home #online .onlineText {
+  margin: 0 0 30px 0;
+}
+body.home #online .videoText {
+  margin: 30px 0 0 0;
+}
+body.home #online .youtube-wrapper {
+  margin-top: 50px;
+}
 body.home #moreinfo {
   padding-bottom: 0px;
 }
@@ -185,11 +234,11 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #a60066;
+  color: #9d5420;
 }
 a:hover,
 a:focus {
-  color: #730047;
+  color: #733d17;
 }
 h1,
 h2,
@@ -205,7 +254,7 @@ p {
   margin-bottom: 20px;
 }
 .bg-primary {
-  background-color: #a60066;
+  background-color: #9d5420;
 }
 .bg-dark {
   background-color: #434343;
@@ -262,14 +311,14 @@ aside {
   transition: all 0.35s;
 }
 .navbar-default .navbar-header .navbar-brand {
-  color: #a60066;
+  color: #9d5420;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #730047;
+  color: #733d17;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-weight: 700;
@@ -286,11 +335,11 @@ aside {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #a60066;
+  color: #9d5420;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #a60066 !important;
+  color: #9d5420 !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -320,12 +369,12 @@ aside {
     background-color: white;
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: #a60066;
+    color: #9d5420;
     font-size: 14px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #730047;
+    color: #733d17;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -333,7 +382,7 @@ aside {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #a60066;
+    color: #9d5420;
   }
 }
 .no-padding {
@@ -343,7 +392,7 @@ aside {
   margin-top: 0;
 }
 .text-primary {
-  color: #a60066;
+  color: #9d5420;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -399,8 +448,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: white;
-  background-color: #a60066;
-  border-color: #a60066;
+  background-color: #9d5420;
+  border-color: #9d5420;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -412,8 +461,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #8d0056;
-  border-color: #820050;
+  background-color: #88491c;
+  border-color: #7f441a;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -438,11 +487,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #a60066;
-  border-color: #a60066;
+  background-color: #9d5420;
+  border-color: #9d5420;
 }
 .btn-primary .badge {
-  color: #a60066;
+  color: #9d5420;
   background-color: white;
 }
 .btn {
