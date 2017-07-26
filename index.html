@@ -204,23 +204,7 @@
         var lngDetector = new window.i18nextBrowserLanguageDetector();
         var options = {
             // order and from where user language should be detected
-            order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
-
-            // keys or params to lookup language from
-            lookupQuerystring: 'lng',
-            lookupCookie: 'i18next',
-            lookupLocalStorage: 'i18nextLng',
-
-            // cache user language on
-            caches: ['localStorage', 'cookie'],
-            excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
-
-            // optional expire and domain for set cookie
-            cookieMinutes: 10,
-            cookieDomain: 'myDomain',
-
-            // optional htmlTag with lang attribute, the default is:
-            htmlTag: document.documentElement
+            order: ['navigator']
         };
 
         i18next
@@ -287,7 +271,7 @@
                             "emailPlaceholder": "email"
                         }
                     },
-                    cz: {
+                    cs: {
                         translation: {
                             "toggleNavigation": "Toggle navigation",
                             "menu": "Menu",
@@ -296,7 +280,7 @@
                             "videoMenuItem": "Video",
                             "contactMenuItem": "Contact",
                             "supportMenuItem": "Support",
-                            "subtitle": "(cz) How can one remember a place which exists in many memories, in many stories?",
+                            "subtitle": "(cs) How can one remember a place which exists in many memories, in many stories?",
                             "aboutText": "\
                                 <p>The village of  Srbská is a tiny place in northern Czech Republic, border to Poland. Today it has just a handful of houses but prior to 1946 it was a thriving village with hundreds of residents, a village which used to be named Wünschendorf, which translates from German as ‘wish village’.</p>\
                                 <p>\
