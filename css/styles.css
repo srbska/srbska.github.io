@@ -195,7 +195,7 @@ body.home #online .onlineText {
   margin: 0 0 30px 0;
 }
 body.home #online .videoText {
-  margin: 30px 0 0 0;
+  margin-top: 30px;
 }
 body.home #online .youtube-wrapper {
   margin-top: 50px;
